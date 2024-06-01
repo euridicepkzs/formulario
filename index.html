@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Personal con Seguimiento de Lectura</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#addBookForm">Agregar Libro</a></li>
+            <li><a href="#updateProgressForm">Actualizar Progreso</a></li>
+            <li><a href="#library">Biblioteca Personal</a></li>
+            <li><a href="#progress">Progreso de Lectura</a></li>
+            
+        </ul>
+    </nav>
+    
+    <div class="container" id="addBookForm">
+        <h1>Biblioteca Personal con Seguimiento de Lectura</h1>
+
+        <div class="form-container">
+            <h2>Agregar Nuevo Libro</h2>
+            <form id="libraryForm">
+                <div class="form-group">
+                    <label for="title">Título del Libro:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="author">Autor:</label>
+                    <input type="text" id="author" name="author" required>
+                </div>
+                <div class="form-group">
+                    <label for="pagesTotal">Total de Páginas:</label>
+                    <input type="number" id="pagesTotal" name="pagesTotal" required>
+                </div>
+                <div class="form-group">
+                    <label for="status">Estado de Lectura:</label>
+                    <select id="status" name="status" required>
+                        <option value="no leído">No Leído</option>
+                        <option value="leído">Leído</option>
+                    </select>
+                </div>
+                <div class="form-group" id="datesGroup">
+                    <label for="startDate">Fecha de Inicio:</label>
+                    <input type="date" id="startDate" name="startDate">
+                    <label for="endDate">Fecha de Finalización:</label>
+                    <input type="date" id="endDate" name="endDate">
+                </div>
+                <div class="form-group">
+                    <button type="submit">Agregar Libro</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-container" id="updateProgressForm">
+            <h2>Actualizar Progreso de Lectura</h2>
+            <form id="readingForm">
+                <div class="form-group">
+                    <label for="bookSelect">Seleccionar Libro:</label>
+                    <select id="bookSelect" name="bookSelect" required></select>
+                </div>
+                <div class="form-group">
+                    <label for="pagesRead">Páginas Leídas:</label>
+                    <input type="number" id="pagesRead" name="pagesRead" required>
+                </div>
+                <div class="form-group">
+                    <label for="quote">Frase o Cita Favorita:</label>
+                    <textarea id="quote" name="quote" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="quotePage">Página de la Cita:</label>
+                    <input type="number" id="quotePage" name="quotePage" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Actualizar Progreso</button>
+                </div>
+            </form>
+        </div>
+
+        <h2 id="library">Biblioteca Personal</h2>
+        <div id="libraryList">
+            <!-- Lista de libros -->
+        </div>
+
+        <h2 id="progress">Progreso de Lectura</h2>
+        <div id="progressList">
+            <!-- Lista de progreso de lectura -->
+        </div>
+
+        <h2 id="statistics">Estadísticas de Lectura</h2>
+        <div id="statistics">
+            <!-- Estadísticas de lectura -->
+        </div>
+    </div>
+    <script src="/js/library.js"></script>
+</body>
+</html>
